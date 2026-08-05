@@ -18,15 +18,22 @@ class MyApp extends StatelessWidget {
 
 class MyhomePage extends StatelessWidget {
   const MyhomePage({super.key});
+
 @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
     appBar: AppBar(title: const Text('ปฏิบัติการที่ 5 - Layouts'),
     backgroundColor: Colors.indigo,
     ),
     body: const Padding(padding: EdgeInsets.all(16.0),
-    child: Text("เริ่มทดลอง Layout ที่นี่!"),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Icon(Icons.home,size:40.0,color: Colors.blue),
+        Icon(Icons.search,size:40.0,color: Colors.green),
+        Icon(Icons.person,size:40.0,color: Colors.orange),
+      ],
+    ),
       )
     );
   }
